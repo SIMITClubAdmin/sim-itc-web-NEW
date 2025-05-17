@@ -14,7 +14,18 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-4">
                 
                 <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">SIM IT Club</h1>
+                  <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-center mb-8 sm:mb-12 px-4" 
+                      style={{
+                        backgroundClip: 'text', 
+                        WebkitTextFillColor: 'transparent', 
+                        backgroundSize: '300% 100%', 
+                        backgroundImage: 'linear-gradient(90deg, rgb(241, 245, 249) 0%, rgb(226, 232, 240) 25%, rgb(239, 68, 68) 50%, rgb(226, 232, 240) 75%, rgb(241, 245, 249) 100%)', 
+                        filter: 'drop-shadow(rgba(226, 232, 240, 0.2) 0px 0px 20px)', 
+                        backgroundPosition: '0% 50%',
+                        animation: 'gradient-shift 12s ease infinite'
+                      }}>
+                    SIM IT CLUB
+                  </h2>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
                     Empowering students through technology, innovation, and community.
                   </p>
