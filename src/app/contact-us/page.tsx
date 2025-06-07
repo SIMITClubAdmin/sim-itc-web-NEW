@@ -11,10 +11,10 @@ export default function ContactUsPage() {
       <div className="max-w-7xl mx-auto px-6">
         <h1 className="text-4xl font-bold text-center mb-12">Contact Us</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="flex justify-center items-center">
           {/* Left: Contact Form */}
           <form
-            className="space-y-4"
+            className="space-y-4 w-full max-w-md"
             onSubmit={(e) => {
               e.preventDefault();
               setSubmitted(true);
@@ -60,17 +60,6 @@ export default function ContactUsPage() {
               <div className="text-green-600 font-medium mt-2">✅ Message sent successfully!</div>
             )}
           </form>
-
-          {/* Right: Image */}
-          <div className="hidden md:block">
-            <Image
-              src="/images/contact-photo.jpg"
-              alt="Contact"
-              width={600}
-              height={400}
-              className="rounded shadow-md object-cover"
-            />
-          </div>
         </div>
       </div>
     </main>

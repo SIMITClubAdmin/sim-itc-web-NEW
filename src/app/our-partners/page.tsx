@@ -3,11 +3,11 @@
 import Image from "next/image";
 
 export default function OurPartnersPage() {
-  const logos = Array.from({ length: 8 }, (_, i) => `partner${i + 1}.png`);
+  const logos = [1, 2, 3]; // 只显示三个
 
   return (
-    <main className="bg-[#0B0B1F] text-white min-h-screen py-12 px-6">
-      <div className="max-w-7xl mx-auto text-center">
+    <main className="bg-neutral-900 text-white min-h-screen py-12 px-6">
+      <div className="max-w-5xl mx-auto text-center">
         {/* Title */}
         <h1 className="text-3xl font-bold mb-4">Our Partners</h1>
         <p className="text-gray-300 mb-12">
@@ -15,17 +15,18 @@ export default function OurPartnersPage() {
         </p>
 
         {/* Partner Logos */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-20">
-          {logos.map((logo, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-20">
+          {logos.map((i) => (
             <div
               key={i}
               className="bg-white rounded-2xl p-4 flex items-center justify-center shadow-md h-32"
             >
               <Image
-                src={`/images/partners/${logo}`}
-                alt={`Partner ${i + 1}`}
+                src={`https://placehold.co/120x80?text=Partner+${i}`}
+                alt={`Partner ${i}`}
                 width={120}
                 height={80}
+                unoptimized
                 className="object-contain max-h-full"
               />
             </div>

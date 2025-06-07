@@ -18,7 +18,7 @@ export default function JoinUsPage() {
         <section>
           <h2 className="text-2xl font-semibold text-red-600 mb-3">How to Join</h2>
           <p>
-            Recruitment opens every semester. Stay updated on our Instagram and Telegram. Simply fill in the form below during the open period and attend the onboarding briefing.
+            Register the form. Stay updated on our Instagram and Telegram. Simply fill in the form below during the open period and attend the onboarding briefing.
           </p>
         </section>
 
@@ -26,10 +26,8 @@ export default function JoinUsPage() {
         <section>
           <h2 className="text-2xl font-semibold text-red-600 mb-3">Membership Expectations</h2>
           <ul className="list-disc pl-6 text-gray-700 space-y-2">
-            <li>Attend weekly meetings</li>
-            <li>Join at least 1 initiative or project per semester</li>
-            <li>Communicate respectfully and professionally</li>
-            <li>Learn and grow with your team</li>
+            <li>Attend workshops</li>
+
           </ul>
         </section>
 
