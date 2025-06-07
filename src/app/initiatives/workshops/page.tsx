@@ -1,51 +1,62 @@
+'use client'
+
+import Image from 'next/image'
+import Link from 'next/link'
+
+const workshops = [
+  {
+    title: 'GitHub Workshop',
+    imageUrl: '/images/highlights/.jpg',
+    link: '/workshops/github',
+  },
+  {
+    title: 'Web Development Workshop',
+    imageUrl: '/images/highlights/.jpg',
+    link: '/workshops/webdev',
+  },
+  {
+    title: 'UI/UX Design Workshop',
+    imageUrl: '/images/highlights/.jpg',
+    link: '/workshops/uiux',
+  },
+  {
+    title: 'Gemini Workshop',
+    imageUrl: '/images/highlights/.jpg',
+    link: '/workshops/gemini',
+  },
+]
+
 export default function WorkshopsPage() {
   return (
-    <main className="p-8 space-y-8">
-      <h1 className="text-3xl font-bold">Workshops</h1>
-      <p>
-        Our workshops cover a wide range of IT topics, including web development, AI/ML, cybersecurity, and more. Open to all SIM students.
-      </p>
+    <div className="min-h-screen px-6 py-10 bg-white">
+      <h1 className="text-4xl font-bold text-red-600 mb-10">Workshops</h1>
 
-      <ul className="list-disc ml-6">
-        <li>GitHub Workshop</li>
-        <li>Web Development Workshop</li>
-        <li>UI/UX Design Workshop</li>
-        <li>Gemini Workshop</li>
-      </ul>
-    </main>
-  );
-}
-
-import Image from "next/image";
-
-const highlights = [
-  { title: "GitHub Workshop", img: "/images/highlights/.jpg" },
-  { title: "Web Development Workshop", img: "/images/highlights/.jpg" },
-  { title: "UI/UX Design Workshop", img: "/images/highlights/.jpg" },
-  { title: "Gemini Workshop", img: "/images/highlights/.jpg" },
-];
-
-export default function WorkshopsPage() {
-  return (
-    <main className="bg-white text-black py-12 px-6">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold text-red-600 mb-10">Event Highlights</h1>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {highlights.map((event, i) => (
-            <div key={i} className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+      <div className="space-y-10">
+        {workshops.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col md:flex-row items-center bg-gray-100 rounded-lg overflow-hidden shadow"
+          >
+            <div className="md:w-1/2 w-full">
               <Image
-                src={event.img}
-                alt={event.title}
-                width={400}
-                height={300}
-                className="w-full h-60 object-cover"
+                src={item.imageUrl}
+                alt={item.title}
+                width={800}
+                height={600}
+                className="w-full h-64 object-cover"
               />
-              <div className="p-4 text-center font-semibold">{event.title}</div>
             </div>
-          ))}
-        </div>
+            <div className="md:w-1/2 w-full p-6">
+              <h2 className="text-xl font-bold text-black mb-2">{item.title}</h2>
+              <Link href={item.link}>
+                <button className="px-4 py-2 border border-gray-400 text-black rounded hover:bg-gray-200">
+                  View More →
+                </button>
+              </Link>
+            </div>
+          </div>
+        ))}
       </div>
-    </main>
-  );
+    </div>
+  )
 }
