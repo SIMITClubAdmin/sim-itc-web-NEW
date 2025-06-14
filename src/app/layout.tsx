@@ -6,13 +6,13 @@ import Footer from "@/components/footer";
 
 export const metadata = {
   title: "SIM IT Club",
-  description: "Official website of SIM IT Club",
+  description: "Official Website of SIM IT Club",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className="antialiased bg-black text-white">
         <Navbar />
         {children}
         <Footer />

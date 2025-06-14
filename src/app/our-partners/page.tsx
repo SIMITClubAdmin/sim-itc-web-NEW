@@ -1,73 +1,81 @@
-"use client";
+'use client';
 
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function OurPartnersPage() {
-  const logos = [1, 2, 3]; // 只显示三个
+  const logos = [
+    { src: '/images/partner/dynamicweb-logo.svg', alt: 'Dynamic Web' },
+    { src: '/images/partner/kitchen-copilot-logo.svg', alt: 'Kitchen Copilot' },
+  ];
 
   return (
-    <main className="bg-neutral-900 text-white min-h-screen py-12 px-6">
+    <main className="bg-black text-white min-h-screen py-12 px-6">
       <div className="max-w-5xl mx-auto text-center">
         {/* Title */}
-        <h1 className="text-3xl font-bold mb-4">Our Partners</h1>
-        <p className="text-gray-300 mb-12">
-          Working together with Singapore's leading organizations to empower youth through technology and innovation.
-        </p>
+        <h1 className="text-3xl font-bold mb-12">Past Partners</h1>
 
         {/* Partner Logos */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-20">
-          {logos.map((i) => (
+        <div className="flex flex-wrap justify-center gap-6 mb-24">
+          {logos.map((logo, index) => (
             <div
-              key={i}
-              className="bg-white rounded-2xl p-4 flex items-center justify-center shadow-md h-32"
+              key={index}
+              className="bg-neutral-800 rounded-2xl p-6 flex items-center justify-center shadow-md h-32 w-64"
             >
               <Image
-                src={`https://placehold.co/120x80?text=Partner+${i}`}
-                alt={`Partner ${i}`}
-                width={120}
-                height={80}
-                unoptimized
+                src={logo.src}
+                alt={logo.alt}
+                width={300}
+                height={100}
                 className="object-contain max-h-full"
               />
             </div>
           ))}
         </div>
 
-        {/* Past Collaborations */}
+        {/* Past Collaborations Section */}
         <section className="mb-24">
-          <h2 className="text-2xl font-semibold mb-4">Past Collaborations</h2>
-          <p className="text-gray-300 max-w-3xl mx-auto">
-            We’ve collaborated with many institutions and industry partners through hackathons, seminars, and social innovation events. Our past efforts include community AI workshops and the Youth Challenge Series.
-          </p>
+          <h2 className="text-2xl font-semibold mb-6">Past Collaborations</h2>
+
+          <div className="flex justify-center">
+            <div className="bg-neutral-800 p-4 rounded-xl shadow-lg max-w-md">
+              <Image
+                src="/images/partner/hackxperience2025.jpg"
+                alt="Hackxperience 2025"
+                width={250}
+                height={500}
+                className="rounded-lg object-contain mx-auto"
+              />
+            </div>
+          </div>
         </section>
 
         {/* Become a Partner Form */}
-        <section className="bg-white text-black rounded-xl max-w-3xl mx-auto p-8">
+        <section className="bg-neutral-900 text-white rounded-xl max-w-3xl mx-auto p-8 border border-gray-700">
           <h2 className="text-2xl font-bold mb-6 text-center">Become a Partner</h2>
           <form className="space-y-4">
             <input
               type="text"
               placeholder="Name"
-              className="w-full border px-4 py-2 rounded bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full border border-gray-600 px-4 py-2 rounded bg-neutral-800 text-white focus:outline-none focus:ring-2 focus:ring-red-500"
             />
             <input
               type="text"
               placeholder="Organization"
-              className="w-full border px-4 py-2 rounded bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full border border-gray-600 px-4 py-2 rounded bg-neutral-800 text-white focus:outline-none focus:ring-2 focus:ring-red-500"
             />
             <input
               type="email"
               placeholder="Email"
-              className="w-full border px-4 py-2 rounded bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full border border-gray-600 px-4 py-2 rounded bg-neutral-800 text-white focus:outline-none focus:ring-2 focus:ring-red-500"
             />
             <textarea
               placeholder="Message"
               rows={4}
-              className="w-full border px-4 py-2 rounded bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full border border-gray-600 px-4 py-2 rounded bg-neutral-800 text-white focus:outline-none focus:ring-2 focus:ring-red-500"
             />
             <button
               type="submit"
-              className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800"
+              className="bg-white text-black px-6 py-2 rounded hover:bg-gray-300 transition"
             >
               Submit
             </button>

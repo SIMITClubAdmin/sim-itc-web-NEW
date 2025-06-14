@@ -1,55 +1,51 @@
-'use client'
+'use client';
 
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
 
 const workshops = [
   {
+    title: 'Google Gemini AI Agents Workshop',
+    imageUrl: 'https://via.placeholder.com/800x400?text=Workshops',
+    link: '/initiatives/workshops',
+  },
+  {
+    title: 'UI/ UX Workshop',
+    imageUrl: 'https://via.placeholder.com/800x400?text=Workshops',
+    link: '/initiatives/workshops',
+  },  {
+    title: 'Web Development Workshop ',
+    imageUrl: 'https://via.placeholder.com/800x400?text=Workshops',
+    link: '/initiatives/workshops',
+  },
+  {
     title: 'GitHub Workshop',
-    imageUrl: '/images/highlights/.jpg',
-    link: '/workshops/github',
+    imageUrl: 'https://via.placeholder.com/800x400?text=Workshops',
+    link: '/initiatives/workshopsn',
   },
-  {
-    title: 'Web Development Workshop',
-    imageUrl: '/images/highlights/.jpg',
-    link: '/workshops/webdev',
-  },
-  {
-    title: 'UI/UX Design Workshop',
-    imageUrl: '/images/highlights/.jpg',
-    link: '/workshops/uiux',
-  },
-  {
-    title: 'Gemini Workshop',
-    imageUrl: '/images/highlights/.jpg',
-    link: '/workshops/gemini',
-  },
-]
+];
 
 export default function WorkshopsPage() {
   return (
-    <div className="min-h-screen px-6 py-10 bg-white">
-      <h1 className="text-4xl font-bold text-red-600 mb-10">Workshops</h1>
-
-      <div className="space-y-10">
+    <div className="min-h-screen px-4 py-10 bg-black text-white">
+      <h1 className="text-4xl font-bold text-red-500 mb-10">Workshops</h1>
+      <div className="grid gap-6 md:grid-cols-2">
         {workshops.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col md:flex-row items-center bg-gray-100 rounded-lg overflow-hidden shadow"
+            className="bg-neutral-800 rounded-lg shadow overflow-hidden flex flex-col"
           >
-            <div className="md:w-1/2 w-full">
-              <Image
-                src={item.imageUrl}
-                alt={item.title}
-                width={800}
-                height={600}
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            <div className="md:w-1/2 w-full p-6">
-              <h2 className="text-xl font-bold text-black mb-2">{item.title}</h2>
+            <Image
+              src={item.imageUrl}
+              alt={item.title}
+              width={1200}
+              height={600}
+              className="w-full h-56 object-cover"
+            />
+            <div className="p-5 flex flex-col flex-grow justify-between">
+              <h2 className="text-xl font-semibold mb-3">{item.title}</h2>
               <Link href={item.link}>
-                <button className="px-4 py-2 border border-gray-400 text-black rounded hover:bg-gray-200">
+                <button className="mt-auto px-4 py-2 border border-gray-500 text-white rounded hover:bg-neutral-700 transition">
                   View More →
                 </button>
               </Link>
@@ -58,5 +54,5 @@ export default function WorkshopsPage() {
         ))}
       </div>
     </div>
-  )
+  );
 }
