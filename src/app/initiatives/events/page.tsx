@@ -23,6 +23,11 @@ const events = [
     imageUrl: 'https://via.placeholder.com/800x400?text=Collaboration+Workshops',
     link: '/initiatives/events/collaboration-workshops',
   },
+  {
+    title: 'Bootcamp',
+    imageUrl: 'https://via.placeholder.com/800x400?text=Bootcamp',
+    link: '/initiatives/events/bootcamp',
+  },
 ];
 
 export default function EventsPage() {
