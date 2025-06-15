@@ -1,0 +1,47 @@
+.fc {
+  direction: ltr;
+  text-align: left;
+}
+.fc .fc-toolbar-title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+.fc .fc-daygrid-day {
+  border: 1px solid #ddd;
+}
+.fc .fc-daygrid-day-number {
+  padding: 4px;
+  font-size: 0.9rem;
+  text-align: right;
+}
+.fc .fc-event {
+  background-color: #3b82f6;
+  color: white;
+  padding: 2px 4px;
+  font-size: 0.75rem;
+  border-radius: 3px;
+  margin: 1px 0;
+  display: block;
+}
+.fc .fc-button {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin: 0 2px;
+  border-radius: 4px;
+}
+.fc .fc-button:hover {
+  background: #444;
+}
+.fc .fc-button-primary:disabled {
+  opacity: 0.5;
+}
+.fc .fc-toolbar.fc-header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+.fc .fc-scrollgrid {
+  border: 1px solid #ccc;
+}
