@@ -1,7 +1,7 @@
 // src/app/layout.tsx
 import "./globals.css";
 import { ReactNode } from "react";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
 
 export const metadata = {
